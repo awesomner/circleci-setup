@@ -21,8 +21,6 @@ jobs:
   say-world:
     docker:
       - image: circleci/node:13.8.0
-    requires:
-      - say-hello
     steps:
       - checkout
       - run:
@@ -35,4 +33,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      - say-world
+      - say-world:
+        requires:
+          - say-hello
