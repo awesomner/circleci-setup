@@ -41,3 +41,4 @@ workflows:
   say-hello-workflow:
     jobs:
       - print_pipeline
+      - job_fail
