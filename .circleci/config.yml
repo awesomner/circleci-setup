@@ -19,7 +19,7 @@ jobs:
           command: |
             echo "Hello World!" > output.txt
       - persist_to_workspace:
-          root: /tmp
+          root: /
           paths:
             - workspace
 
@@ -34,7 +34,7 @@ jobs:
           command: |
             echo cat output.txt
       - attach_workspace:
-          at: /tmp/workspace
+          at: /workspace
 
 
 # Invoke jobs via workflows
