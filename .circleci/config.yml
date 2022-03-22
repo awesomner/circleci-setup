@@ -12,7 +12,7 @@ commands:
         type: string
         default: "None"
     steps:
-      - run: echo << paramenters.id >>
+      - run: echo << parameters.id >>
 
 jobs:
 
