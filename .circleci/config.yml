@@ -31,8 +31,7 @@ jobs:
       - checkout
       - run:
           name: "Print Hello World"
-          command: |
-            echo cat ~/output.txt
+          command: cat ~/output.txt
       - attach_workspace:
           at: ~/
 
