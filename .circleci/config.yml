@@ -7,7 +7,7 @@ version: 2.1
 commands:
   print_pipeline_id:
     description: "Print pipeline ID"
-    paramenters:
+    parameters:
       id:
         type: string
         default: "None"
