@@ -13,9 +13,7 @@ Resources:
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
-      VpcId:
-        Fn::ImportValue:
-          !Sub "Main-vpc"
+      VpcId: "vpc-0ce62565e8e425d2c"
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
