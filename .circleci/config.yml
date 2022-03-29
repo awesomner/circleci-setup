@@ -33,21 +33,21 @@ jobs:
               --region eu-central-1
       - destroy_environment
 
-  configure_infrastructure:
-    docker:
-      - image: python:3.7-alpine3.11
-    steps:
-      - checkout
-      - add_ssh_keys:
-          fingerprints: ["53:17:43:02:d2:c2:a1:96:66:f4:b3:75:07:ad:27:b9"]
-      - run:
-          name: Install Ansible
-          command: |
-            apk add --update ansible
-      - run:
-          name: Run Playbook and Configure server
-          command: |
-            ansible-playbook -i inventory main.yml
+  # configure_infrastructure:
+  #   docker:
+  #     - image: python:3.7-alpine3.11
+  #   steps:
+  #     - checkout
+  #     - add_ssh_keys:
+  #         fingerprints: ["53:17:43:02:d2:c2:a1:96:66:f4:b3:75:07:ad:27:b9"]
+  #     - run:
+  #         name: Install Ansible
+  #         command: |
+  #           apk add --update ansible
+  #     - run:
+  #         name: Run Playbook and Configure server
+  #         command: |
+  #           ansible-playbook -i inventory main.yml
 
   smoke_test:
     docker:
