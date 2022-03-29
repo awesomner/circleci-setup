@@ -33,7 +33,6 @@ jobs:
               --region eu-central-1
       - run: return 1
       - destroy_environment
-        when: on_fail
 
   # configure_infrastructure:
   #   docker:
