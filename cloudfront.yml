@@ -3,6 +3,7 @@ Parameters:
 PipelineID:
   Description: Existing Bucket name
   Type: String
+  default: "webappbucket100"
 Resources:
   CloudFrontOriginAccessIdentity:
     Type: "AWS::CloudFront::CloudFrontOriginAccessIdentity"
