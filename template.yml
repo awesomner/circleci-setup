@@ -7,6 +7,7 @@ Resources:
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
+      KeyName: "WebAppKey"
       ImageId: 'ami-0d527b8c289b4af7f'
       InstanceType: t2.micro
   InstanceSecurityGroup:
